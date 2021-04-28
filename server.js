@@ -81,7 +81,8 @@ app.delete('/api/candidate/:id', (req, res) => {
 });
 
 // Create a candidate
-app.post('/api/candidate', ({ body }, res) => {
+app.post('/api/candidate', ({body}, res) => {
+  console.log(body)
   const errors = inputCheck(
     body,
     'first_name',
