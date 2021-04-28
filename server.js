@@ -84,9 +84,7 @@ app.post('/api/candidate', ({body}, res) => {
   const errors = inputCheck(body,'first_name', 'last_name', 'industry_connected');
   console.log(body.first_name)
   if (errors) {
-    res.status(400).json({
-      error: errors
-    });
+    res.status(400).json({error: errors});
     return;
   }
   const sql = `INSERT INTO candidates (first_name, last_name, industry_connected)
